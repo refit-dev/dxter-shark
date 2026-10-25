@@ -26,7 +26,7 @@ export const Products: CollectionConfig = {
           const createdProduct = await stripe.products.create({
             name: data.name,
             default_price_data: {
-              currency: 'USD',
+              currency: 'usd',
               // we god the cents of that price
               unit_amount: Math.round(data.price * 100)
             }

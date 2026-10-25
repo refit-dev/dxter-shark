@@ -89,7 +89,7 @@ export const paymentRouter = router({
           success_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/thank-you?orderId=${order.id}`,
           // if something went wrong, if the user cancel
           cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/cart`,
-          payment_method_types: ['card'],
+          allowed_payment_method_types: ['card'],
           mode: 'payment',
           metadata: {
             userId: user.id,
